@@ -13,3 +13,7 @@ body {
     background-repeat: no-repeat;
     background-attachment: fixed;
 }
+
+.btn-floating {
+    margin: 5px;
+}
