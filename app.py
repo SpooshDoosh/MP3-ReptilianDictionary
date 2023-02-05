@@ -118,8 +118,17 @@ def add_word():
 
 @app.route("/edit_word/<word_id>", methods=["GET", "POST"])
 def edit_word(word_id):
-    word = mongo.db.definitions.find_one({"_id": ObjectId()})
+    if request.method == "POST":
+        definition = {
+            "category_name": request.form.get("category_name"),
+            "word": request.form.get("word"),
+            "word_definition": request.form.get("word_definition"),
+            "contributor": session["user"]
+        }
+        mongo.db.definitions.update_one({"_id": ObjectId(word_id)}, {"$set": definition})
+        flash("Word successfully updated!")
 
+    word = mongo.db.definitions.find_one({"_id": ObjectId(word_id)})
     categories = mongo.db.categories.find().sort("category_name, 1")
     return render_template("edit_word.html", word=word, categories=categories)
 

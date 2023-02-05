@@ -11,7 +11,8 @@
             <div class="row">
                 <div class="input-field col s12">
                     <i class="fas fa-book prefix light-green-text text-darken-2"></i>
-                    <input id="word" name="word" type="text" class="validate" required>
+                    <input id="word" name="word" type="text" value="{{ word.word }}"
+                    class="validate" required>
                     <label for="word">Word</label>
                 </div>
             </div>
@@ -21,7 +22,9 @@
                 <div class="input-field col s12">
                     <i class="fas fa-align-left prefix light-green-text text-darken-2"></i>
                     <textarea id="word_definition" name="word_definition" class="materialize-textarea validate"
-                        required></textarea>
+                        required>
+                    {{- word.word_definition -}}
+                    </textarea>
                     <label for="word_definition">Word Definition</label>
                 </div>
             </div>
@@ -30,9 +33,13 @@
             <div class="input-field col s12">
                 <i class="fas fa-folder-open prefix light-green-text text-darken-2"></i>
                 <select id="category_name" name="category_name" class="validate" required>
-                    <option value="" disabled selected>Select appropriate category/categories</option>
+                    <option value="" disabled>Select appropriate category/categories</option>
                     {% for category in categories %}
+                        {% if category.category_name == word.category_name %}
+                        <option value="{{ category.category_name }}" selected>{{ category.category_name }}</option>
+                        {% else %}
                         <option value="{{ category.category_name }}">{{ category.category_name }}</option>
+                        {% endif %}
                     {% endfor %}
                 </select>
                 <label for="category_name">Terminology Category</label>
@@ -41,8 +48,14 @@
             <!-- Submit Button-->
             <div class="row">
                 <div class="col s12 center-align">
+
+                    <a href="{{ url_for('profile', username=session['user']) }}" class="btn btn-large red waves-effect waves-light" type="submit">
+                        Cancel
+                        <i class="fas fa-x"></i>
+                    </a>
+
                     <button class="btn btn-large light-green darken-1 waves-effect waves-light" type="submit">
-                        Edit Word
+                        Update
                         <i class="fas fa-pen-to-square"></i>
                     </button>
                 </div>
