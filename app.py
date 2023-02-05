@@ -83,8 +83,7 @@ def profile(username):
     username = mongo.db.users.find_one(
         {"username": session["user"]})["username"]
     words = mongo.db.definitions.find_one(
-        {"contributor": session["user"]}
-    )
+        {"contributor": session["user"]})
 
     if session["user"]:
         return render_template("profile.html", username=username, words=words)
@@ -115,6 +114,14 @@ def add_word():
 
     categories = mongo.db.categories.find().sort("category_name, 1")
     return render_template("add_word.html", categories=categories)
+
+
+@app.route("/edit_word/<word_id>", methods=["GET", "POST"])
+def edit_word(word_id):
+    word = mongo.db.definitions.find_one({"_id": ObjectId()})
+
+    categories = mongo.db.categories.find().sort("category_name, 1")
+    return render_template("edit_word.html", word=word, categories=categories)
 
 
 if __name__ == "__main__":

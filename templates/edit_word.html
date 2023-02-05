@@ -1,0 +1,54 @@
+{% extends "base.html" %}
+{% block content %}
+
+    <h3 class="light-green-text text-darken-2 center-align">
+        Edit Word
+    </h3>
+
+    <div class="row card-panel grey lighten-3">
+        <form class="col s12" method="POST" action="{{ url_for('edit_word', word_id=word._id) }}">
+            <!-- Word Input -->
+            <div class="row">
+                <div class="input-field col s12">
+                    <i class="fas fa-book prefix light-green-text text-darken-2"></i>
+                    <input id="word" name="word" type="text" class="validate" required>
+                    <label for="word">Word</label>
+                </div>
+            </div>
+
+            <!-- Word Definition Input -->
+            <div class="row">
+                <div class="input-field col s12">
+                    <i class="fas fa-align-left prefix light-green-text text-darken-2"></i>
+                    <textarea id="word_definition" name="word_definition" class="materialize-textarea validate"
+                        required></textarea>
+                    <label for="word_definition">Word Definition</label>
+                </div>
+            </div>
+
+            <!-- Category Selection -->
+            <div class="input-field col s12">
+                <i class="fas fa-folder-open prefix light-green-text text-darken-2"></i>
+                <select id="category_name" name="category_name" class="validate" required>
+                    <option value="" disabled selected>Select appropriate category/categories</option>
+                    {% for category in categories %}
+                        <option value="{{ category.category_name }}">{{ category.category_name }}</option>
+                    {% endfor %}
+                </select>
+                <label for="category_name">Terminology Category</label>
+            </div>
+
+            <!-- Submit Button-->
+            <div class="row">
+                <div class="col s12 center-align">
+                    <button class="btn btn-large light-green darken-1 waves-effect waves-light" type="submit">
+                        Edit Word
+                        <i class="fas fa-pen-to-square"></i>
+                    </button>
+                </div>
+            </div>
+            
+        </form>
+    </div>
+
+{% endblock %}
