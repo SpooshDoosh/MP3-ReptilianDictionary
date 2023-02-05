@@ -14,12 +14,25 @@
                     <label for="word">Word</label>
                 </div>
             </div>
+
             <div class="row">
                 <div class="input-field col s12">
                     <i class="fas fa-align-left prefix light-green-text text-darken-2"></i>
-                    <textarea id="word_definition" name="word_definition" class="materialize-textarea" required></textarea>
+                    <textarea id="word_definition" name="word_definition" class="materialize-textarea validate"
+                        required></textarea>
                     <label for="word_definition">Word Definition</label>
                 </div>
+            </div>
+
+            <div class="input-field col s12">
+                <i class="fas fa-folder-open prefix light-green-text text-darken-2"></i>
+                <select multiple id="category_name" name="category_name" class="validate" required>
+                    <option value="" disabled selected>Select appropriate category/categories</option>
+                    {% for category in categories %}
+                        <option value="{{ category.category_name }}">{{ category.category_name }}</option>
+                    {% endfor %}
+                </select>
+                <label for="category_name">Terminology Category</label>
             </div>
         </form>
     </div>
