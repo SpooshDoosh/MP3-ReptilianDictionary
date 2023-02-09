@@ -5,21 +5,44 @@
         Dictionary
     </h3>
 
-    <div class="row">
-        <div class="col s12 m12">
-            {% for definition in definitions %}
-            <div class="card-panel light-green darken-4">
-                <div class="white-text">
-                    <strong><h4>{{ definition.word }}</h4></strong>
-                    <p>{{ definition.word_definition}}</p>
-                    <p>Contributor: <em>{{ definition.contributor }}</em></p>
-                    <p><em>{{ definition.category_name }}</em></p>
+    <div class="row card-panel grey lighten-5">
+        <form action="{{ url_for('search') }}" method="post" class="col s12">
+            <div class="row valign-wrapper cemter-align">
+                <div class="input-field col s12 m8">
+                    <i class="fas fa-search prefix light-green-text text-darken-4" ></i>
+                    <input type="text" name="query" id="query" minlength="3" class="validate" required>
+                    <label for="query">Search Dictionary</label>
+                </div>
+                <div class="col s12 m4">
+                    <a href="{{ url_for('get_definitions') }}" class="btn btn-medium waves-effect waves-light red">Reset</a>
+                    <button type="submit" class="btn btn-medium waves-effect waves-light light-green">
+                        <i class="fas fa-search left"></i>
+                        Search
+                    </button>
                 </div>
             </div>
-            {% endfor %}
-        </div>
+        </form>
     </div>
 
-
+    {% if definitions|length > 0 %}
+        <div class="row">
+            <div class="col s12 m12">
+                {% for definition in definitions %}
+                <div class="card-panel light-green darken-4">
+                    <div class="white-text">
+                        <strong><h4>{{ definition.word }}</h4></strong>
+                        <p>{{ definition.word_definition}}</p>
+                        <p>Contributor: <em>{{ definition.contributor }}</em></p>
+                        <p><em>{{ definition.category_name }}</em></p>
+                    </div>
+                </div>
+                {% endfor %}
+            </div>
+        </div>
+    {% else %}
+    <h3 class="red-text text-darken-2 center-align">
+        No results found
+    </h3>
+    {% endif %}
 
 {% endblock %}
