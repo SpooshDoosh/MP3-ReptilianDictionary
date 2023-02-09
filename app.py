@@ -133,6 +133,13 @@ def edit_word(word_id):
     return render_template("edit_word.html", word=word, categories=categories)
 
 
+@app.route("/delete_word/<word_id>")
+def delete_word(word_id):
+    mongo.db.definitions.remove({"_id": ObjectId(word_id)})
+    flash("Word removed successfully")
+    return redirect(url_for("get_definitions"))
+
+
 if __name__ == "__main__":
     app.run(host=os.environ.get("IP"),
             port=int(os.environ.get("PORT")),
