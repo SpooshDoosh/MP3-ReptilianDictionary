@@ -19,11 +19,6 @@ mongo = PyMongo(app)
 
 
 @app.route("/")
-@app.route("/home")
-def home():
-    return render_template("home.html")
-
-
 @app.route("/get_definitions")
 def get_definitions():
     definitions = list(mongo.db.definitions.find())
@@ -58,8 +53,8 @@ def register():
         # Enters user into new session
         session["user"] = request.form.get("username").lower()
         flash("Successfully registered, welcome to Reptilian Dictionary!")
-        return redirect(url_for("profile", username=session["user"]))
-    return render_template("register.html")
+        return redirect(url_for("profile", username=session["user"]))    
+        return render_template("register.html")
 
 
 @app.route("/login", methods=["GET", "POST"])
