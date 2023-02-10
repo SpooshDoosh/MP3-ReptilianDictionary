@@ -19,6 +19,11 @@ mongo = PyMongo(app)
 
 
 @app.route("/")
+@app.route("/home")
+def home():
+    return render_template("home.html")
+
+
 @app.route("/get_definitions")
 def get_definitions():
     definitions = list(mongo.db.definitions.find())
@@ -72,6 +77,7 @@ def login():
                 flash("Welcome, {}".format(request.form.get("username")))
                 return redirect(url_for(
                     "profile", username=session["user"]))
+
             else:
                 # Invalid password match
                 flash("The username and/or password is incorrect")
@@ -133,7 +139,8 @@ def edit_word(word_id):
             "word_definition": request.form.get("word_definition"),
             "contributor": session["user"]
         }
-        mongo.db.definitions.update_one({"_id": ObjectId(word_id)}, {"$set": definition})
+        mongo.db.definitions.update_one(
+            {"_id": ObjectId(word_id)}, {"$set": definition})
         flash("Word successfully updated!")
 
     word = mongo.db.definitions.find_one({"_id": ObjectId(word_id)})
