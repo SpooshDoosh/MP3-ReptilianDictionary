@@ -53,8 +53,9 @@ def register():
         # Enters user into new session
         session["user"] = request.form.get("username").lower()
         flash("Successfully registered, welcome to Reptilian Dictionary!")
-        return redirect(url_for("profile", username=session["user"]))    
-        return render_template("register.html")
+        return redirect(url_for("profile", username=session["user"]))
+
+    return render_template("register.html")
 
 
 @app.route("/login", methods=["GET", "POST"])
