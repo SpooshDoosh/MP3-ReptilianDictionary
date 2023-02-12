@@ -71,7 +71,7 @@ p {
 
 .flashes h4 {
     line-height: 2;
-    color: #009688;
+    color: #fff;
 }
 
 .heading {
@@ -100,4 +100,9 @@ h3 {
 
 .card-panel {
     background-color: #212121;
+}
+
+.profile-panel {
+    background-color: transparent;
+    box-shadow: none;
 }
