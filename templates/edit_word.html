@@ -1,16 +1,16 @@
 {% extends "base.html" %}
 {% block content %}
 
-    <h3 class="light-green-text text-darken-2 center-align">
+    <h3 class="center-align">
         Edit Word
     </h3>
 
-    <div class="row card-panel grey lighten-3">
+    <div class="row card-panel rounded-edge">
         <form class="col s12" method="POST" action="{{ url_for('edit_word', word_id=word._id) }}">
             <!-- Word Input -->
             <div class="row">
                 <div class="input-field col s12">
-                    <i class="fas fa-book prefix light-green-text text-darken-2"></i>
+                    <i class="fas fa-book prefix deep-orange-text text-darken-2"></i>
                     <input id="word" name="word" type="text" value="{{ word.word }}"
                     class="validate" required>
                     <label for="word">Word</label>
@@ -20,10 +20,10 @@
             <!-- Word Definition Input -->
             <div class="row">
                 <div class="input-field col s12">
-                    <i class="fas fa-align-left prefix light-green-text text-darken-2"></i>
+                    <i class="fas fa-align-left prefix deep-orange-text text-darken-2"></i>
                     <textarea id="word_definition" name="word_definition" class="materialize-textarea validate"
                         required>
-                    {{- word.word_definition -}}
+                    {{- word.word_definition.capitalize() -}}
                     </textarea>
                     <label for="word_definition">Word Definition</label>
                 </div>
@@ -31,12 +31,12 @@
 
             <!-- Category Selection -->
             <div class="input-field col s12">
-                <i class="fas fa-folder-open prefix light-green-text text-darken-2"></i>
+                <i class="fas fa-folder-open prefix deep-orange-text text-darken-2"></i>
                 <select id="category_name" name="category_name" class="validate" required>
                     <option value="" disabled>Select appropriate category/categories</option>
                     {% for category in categories %}
                         {% if category.category_name == word.category_name %}
-                        <option value="{{ category.category_name }}" selected>{{ category.category_name }}</option>
+                        <option value="{{ category.category_name }}" selected>{{ category.category_name.capitalize() }}</option>
                         {% else %}
                         <option value="{{ category.category_name }}">{{ category.category_name }}</option>
                         {% endif %}
@@ -49,12 +49,12 @@
             <div class="row">
                 <div class="col s12 center-align">
 
-                    <a href="{{ url_for('profile', username=session['user']) }}" class="btn btn-large red waves-effect waves-light" type="submit">
+                    <a href="{{ url_for('profile', username=session['user']) }}" class="btn btn-large waves-effect waves-light red darken-2" type="submit">
                         Cancel
                         <i class="fas fa-x"></i>
                     </a>
 
-                    <button class="btn btn-large light-green darken-1 waves-effect waves-light" type="submit">
+                    <button class="btn btn-large waves-effect waves-light deep-orange darken-2" type="submit">
                         Update
                         <i class="fas fa-pen-to-square"></i>
                     </button>
