@@ -22,7 +22,10 @@ mongo = PyMongo(app)
 @app.route("/get_definitions")
 def get_definitions():
     definitions = list(mongo.db.definitions.find().sort("word", 1))
-    return render_template("definitions.html", definitions=definitions)
+    return render_template(
+        "definitions.html",
+        definitions=definitions,
+        )
 
 
 @app.route("/search", methods=["GET", "POST"])
@@ -30,7 +33,10 @@ def search():
     query = request.form.get("query")
     definitions = list(mongo.db.definitions.find(
         {"$text": {"$search": query}}))
-    return render_template("definitions.html", definitions=definitions)
+    return render_template(
+        "definitions.html",
+        definitions=definitions
+        )
 
 
 @app.route("/register", methods=["GET", "POST"])
@@ -53,7 +59,10 @@ def register():
         # Enters user into new session
         session["user"] = request.form.get("username").lower()
         flash("Successfully registered, welcome to Reptilian Dictionary!")
-        return redirect(url_for("profile", username=session["user"]))
+        return redirect(url_for(
+            "profile",
+            username=session["user"]
+            ))
 
     return render_template("register.html")
 
@@ -72,7 +81,9 @@ def login():
                 session["user"] = request.form.get("username").lower()
                 flash("Welcome, {}".format(request.form.get("username")))
                 return redirect(url_for(
-                    "profile", username=session["user"]))
+                    "profile",
+                    username=session["user"]
+                    ))
 
             else:
                 # Invalid password match
@@ -96,7 +107,10 @@ def profile(username):
         {"contributor": session["user"]})
 
     if session["user"]:
-        return render_template("profile.html", username=username, words=words)
+        return render_template(
+            "profile.html",
+            username=username,
+            words=words)
 
     return redirect(url_for("login"))
 
@@ -141,7 +155,11 @@ def edit_word(word_id):
 
     word = mongo.db.definitions.find_one({"_id": ObjectId(word_id)})
     categories = mongo.db.categories.find().sort("category_name, 1")
-    return render_template("edit_word.html", word=word, categories=categories)
+    return render_template(
+        "edit_word.html",
+        word=word,
+        categories=categories
+        )
 
 
 @app.route("/delete_word/<word_id>")
