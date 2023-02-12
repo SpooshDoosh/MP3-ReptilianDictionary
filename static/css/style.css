@@ -1,26 +1,30 @@
 /*-------------------- FORMS ---------------------*/
 
+.input-field {
+    color: #fff !important;
+}
+
 .input-field label {
-    color: #3f3e3e;
+    color: #fff;
   }
   
   .input-field input[type=text]:focus + label {
-    color: #000 !important;
+    color: #fff !important;
   }
   
   .input-field input[type=text]:focus {
-    border-bottom: 1px solid #7cb342 !important;
-    box-shadow: 0 1px 0 0 #7cb342 !important;
+    border-bottom: 1px solid #fff !important;
+    box-shadow: 0 1px 0 0 #fff !important;
   }
 
-  .input-field input[type=text].valid {
-    border-bottom: 1px solid #7cb342 !important;
-    box-shadow: 0 1px 0 0 #7cb342 !important;
+  .input-field input[type=text].valid, .input-field input[type=password].valid {
+    border-bottom: 1px solid #fff !important;
+    box-shadow: 0 1px 0 0 #fff !important;
   }
   
-  .input-field input[type=text].invalid {
-    border-bottom: 1px solid #b71c1c !important;
-    box-shadow: 0 1px 0 0 #b71c1c !important;
+  .input-field input[type=text].invalid, .input-field input[type=password].invalid {
+    border-bottom: 1px solid #fff !important;
+    box-shadow: 0 1px 0 0 #fff !important;
   }
 
 /*-------------------- BODY AND TEXT ---------------------*/
@@ -39,16 +43,17 @@ body {
     text-shadow: 2px 2px 2px rgba(0, 0, 0, 0.5);
 }
 
-.intro {
+.text-1 {
     color: #fff;
 }
 
 .paragraph-style-1 {
-    color: #424242;
+    color: #ff7043;
 }
 
 p {
     font-size: large;
+    color: #fff;
 }
 
 
@@ -58,33 +63,41 @@ p {
     margin: 5px;
 }
 
+.btn-medium {
+    border-radius: 30px;
+}
+
 /*-------------------- HEADINGS ---------------------*/
 
 .flashes h4 {
     line-height: 2;
-    color: #e46c1c;
+    color: #009688;
 }
 
 .heading {
-    color: #7cb342;
+    color: #fff;
     font-weight: 600;
 }
 
 h4 {
-    text-decoration: underline;
+    color: #fff;
+}
+
+h3 {
+    color: #fff;
 }
 
 /*-------------------- CARD PANELS ---------------------*/
 
 .rounded-edge {
-    border-radius: 25px;
-    border: 4px solid #7cb342;
+    border-radius: 30px;
+    border: 4px solid #ff5722;
 }
 
 .search-bar {
-    background-color: #d3fca8;
+    background-color: #212121;
 }
 
 .card-panel {
-    background-color: #dcedc8;
+    background-color: #212121;
 }
