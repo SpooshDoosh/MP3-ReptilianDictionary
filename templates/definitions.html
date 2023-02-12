@@ -2,7 +2,8 @@
 {% block content %}
 
     <div class="row">
-        <div class="col s12 intro">
+        <div class="col s12 intro heading">
+            <h3 class="center-align">Welcome to the Reptilian Dictionary</h3>
             <p>
                 This dictionary was created with those new to reptile keeping in mind, 
                 so it offers only simplified explanations for common terms that new keepers may come across.
@@ -22,13 +23,13 @@
         <form action="{{ url_for('search') }}" method="post" class="col s12">
             <div class="row valign-wrapper cemter-align">
                 <div class="input-field col s12 m8">
-                    <i class="fas fa-search prefix light-green-text text-darken-4" ></i>
+                    <i class="fas fa-search prefix light-green-text text-darken-1" ></i>
                     <input type="text" name="query" id="query" minlength="3" class="validate" required>
                     <label for="query">Search Dictionary</label>
                 </div>
                 <div class="col s12 m4">
-                    <a href="{{ url_for('get_definitions') }}" class="btn btn-medium waves-effect waves-light red">Reset</a>
-                    <button type="submit" class="btn btn-medium waves-effect waves-light light-green">
+                    <a href="{{ url_for('get_definitions') }}" class="btn btn-medium waves-effect waves-light red darken-4">Reset</a>
+                    <button type="submit" class="btn btn-medium waves-effect waves-light light-green darken-1">
                         <i class="fas fa-search left"></i>
                         Search
                     </button>
@@ -41,7 +42,7 @@
         <div class="row">
             <div class="col s12 m12">
                 {% for definition in definitions %}
-                <div class="card-panel light-green darken-1 rounded-edge">
+                <div class="card-panel rounded-edge">
                     <div>
                         <strong><h4>{{ definition.word }}:</h4></strong>
                         <p>{{ definition.word_definition}}</p>

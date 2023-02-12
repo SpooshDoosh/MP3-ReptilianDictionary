@@ -1,15 +1,29 @@
-.text-shadow {
-    text-shadow: 2px 2px 2px rgba(0, 0, 0, 0.5);
-}
+/*-------------------- FORMS ---------------------*/
 
-.flashes h4 {
-    line-height: 2;
-    color: #e46c1c;
-}
+.input-field label {
+    color: #3f3e3e;
+  }
+  
+  .input-field input[type=text]:focus + label {
+    color: #000 !important;
+  }
+  
+  .input-field input[type=text]:focus {
+    border-bottom: 1px solid #7cb342 !important;
+    box-shadow: 0 1px 0 0 #7cb342 !important;
+  }
 
-.intro {
-    color: #fff;
-}
+  .input-field input[type=text].valid {
+    border-bottom: 1px solid #7cb342 !important;
+    box-shadow: 0 1px 0 0 #7cb342 !important;
+  }
+  
+  .input-field input[type=text].invalid {
+    border-bottom: 1px solid #b71c1c !important;
+    box-shadow: 0 1px 0 0 #b71c1c !important;
+  }
+
+/*-------------------- BODY AND TEXT ---------------------*/
 
 body {
     color: black;
@@ -21,32 +35,56 @@ body {
     background-attachment: fixed;
 }
 
-.btn-floating {
-    margin: 5px;
+.text-shadow {
+    text-shadow: 2px 2px 2px rgba(0, 0, 0, 0.5);
 }
 
-h4 {
-    text-decoration: underline;
+.intro {
+    color: #fff;
 }
 
 .paragraph-style-1 {
-    color: #d3fca8;
+    color: #424242;
 }
 
 p {
     font-size: large;
 }
 
-.rounded-edge {
-    border-radius: 25px;
-    border: 4px solid #e46c1c;
+
+/*-------------------- BUTTONS ---------------------*/
+
+.btn-floating {
+    margin: 5px;
+}
+
+/*-------------------- HEADINGS ---------------------*/
+
+.flashes h4 {
+    line-height: 2;
+    color: #e46c1c;
 }
 
 .heading {
-    color: #e46c1c;
+    color: #7cb342;
     font-weight: 600;
+}
+
+h4 {
+    text-decoration: underline;
+}
+
+/*-------------------- CARD PANELS ---------------------*/
+
+.rounded-edge {
+    border-radius: 25px;
+    border: 4px solid #7cb342;
 }
 
 .search-bar {
     background-color: #d3fca8;
+}
+
+.card-panel {
+    background-color: #dcedc8;
 }
