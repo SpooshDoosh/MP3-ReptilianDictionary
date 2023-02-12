@@ -1,3 +1,5 @@
+@import url('https://fonts.googleapis.com/css2?family=Kanit:wght@100;200;300;400;500;600;700&display=swap');
+
 /*-------------------- FORMS ---------------------*/
 
 .input-field {
@@ -42,6 +44,7 @@ body {
     background-position: center;
     background-repeat: no-repeat;
     background-attachment: fixed;
+    font-family: 'Kanit', sans-serif;
 }
 
 .text-shadow {
@@ -57,7 +60,8 @@ body {
 }
 
 p {
-    font-size: large;
+    font-size: larger;
+    font-weight: 300;
     color: #fff;
 }
 
