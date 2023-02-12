@@ -1,6 +1,6 @@
 import os
 from flask import (
-    Flask, flash, render_template, 
+    Flask, flash, render_template,
     redirect, request, session, url_for)
 from flask_pymongo import PyMongo
 from bson.objectid import ObjectId
@@ -21,7 +21,7 @@ mongo = PyMongo(app)
 @app.route("/")
 @app.route("/get_definitions")
 def get_definitions():
-    definitions = list(mongo.db.definitions.find())
+    definitions = list(mongo.db.definitions.find().sort("word", 1))
     return render_template("definitions.html", definitions=definitions)
 
 
