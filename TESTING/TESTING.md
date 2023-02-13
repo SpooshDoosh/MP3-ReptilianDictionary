@@ -96,110 +96,67 @@ I personally tested the website on my Google Pixel 7 Pro.
 
 ## HTML
 
-Each page of the website was run through the W3C Markup Validation Service to ensure there were no errors.
+Each page of the website was run through the W3C Markup Validation Service to ensure there were no errors. Could only test on certain pages due to the need to login.
 
-* .html
-    ![]()
+* * definitions.html
+    ![home](/TESTING/home.png)
 
-* .html
-    ![]()
+* login.html
+    ![login](/TESTING/login.png)
 
-* .html
-    ![]()
+* register.html
+    ![register](/TESTING/register.png)
 
-* .html
-    ![]()
-
-* .html
-    ![]()
 
 ## CSS
 
 The website's CSS was run through the W3C CSS Validation Service (Jigsaw). No issues or errors were found.
 
-* .css
-    ![]()
+* style.css
+    ![css](/TESTING/css-validator.png)
 ---
 
 # Lighthouse
 
 ## Desktop Results
 
-* .html
+* definitions.html
+    ![home](/TESTING/M-HOME.png)
 
-    ![]()
+* login.html
+    ![login](/TESTING/M-LOGIN.png)
 
+* register.html
+    ![register](/TESTING/M-REGISTER.png)
 
-* .html
+* profile.html
+    ![profile](/TESTING/m-profile.png)
 
-    ![]()
+* add_word.html
+    ![addword](/TESTING/m-addword.png)
 
-
-* .html
-
-    ![]()
-
-* .html
-
-    ![]()
-
-    * Lower scores addressed below in Debugging section.
-
-* .html
-
-    ![]()
+* edit_word.html
+    ![editword](/TESTING/m-editword.png)
 
 ## Mobile Results
 
-* Low lighthouse scores for mobile are addressed in Debugging section.
+* definitions.html
+    ![home](/TESTING/DT-HOME.png)
 
-* .html
+* login.html
+    ![login](/TESTING/DT-LOGIN.png)
 
-    ![]()
+* register.html
+    ![register](/TESTING/DT-REGISTER.png)
 
+* profile.html
+    ![profile](/TESTING/DT-PROFILE.png)
 
-* .html
+* add_word.html
+    ![addword](/TESTING/DT-ADDWORD.png)
 
-    ![]()
-
-
-* .html
-
-    ![]()
-
-* .html
-
-    ![]()
-
-* .html
-
-    ![]()
----
-
-# Color Contrast Accessibility Validation
-
-* .html
-
-    ![]()
-
-
-* .html
-
-    ![]()
-
-
-* .html
-
-    ![]()
-
-* .html
-
-    ![]()
-
-* .html
-
-    ![]()
-
+* edit_word.html
+    ![editword](/TESTING/DT-EDITWORD.png)
 ---
 
 # Debugging
@@ -216,4 +173,4 @@ The website's CSS was run through the W3C CSS Validation Service (Jigsaw). No is
 
 * Unable to view all contributions on user's profile page. Only one is being displayed.
 
-* 
+* Unable to make 404 page functional. Tried using the Flask documentation and other resources to no avail.
