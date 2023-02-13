@@ -78,6 +78,10 @@ p {
 
 /*-------------------- HEADINGS ---------------------*/
 
+.brand-logo {
+    margin-left: 20px;
+}
+
 .flashes h4 {
     line-height: 2;
     color: #fff;
@@ -114,4 +118,16 @@ h3 {
 .profile-panel {
     background-color: transparent;
     box-shadow: none;
+}
+
+/*-------------------- MEDIA QUERIES ---------------------*/
+
+@media screen and (max-width: 500px) {
+    .btn i {
+        display: none;
+    }
+
+    .btn {
+        font-size: xx-small;
+    }
 }

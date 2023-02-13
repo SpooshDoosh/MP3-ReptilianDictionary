@@ -33,7 +33,7 @@ I personally tested the website on my Google Pixel 7 Pro.
         ![](
 
     * I want to be able to easily understand and navigate the website.
-        * There is a navigation bar along the top of every page. Clicking on the logo will return the user to the homepage. There are buttons throughout the website with a clear description of their purpose.
+        * There is a navigation bar along the top of every page. Clicking on the logo will return the user to the homepage. There are buttons throughout the website with a clear description of their purpose. There is a Back To Top butoon at the bottom of the definitions page.
 
         ![]()
 
