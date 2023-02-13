@@ -8,7 +8,7 @@
 
 UUID=$(cat /proc/sys/kernel/random/uuid)
 URL=https://1xthkmzwg3.execute-api.eu-west-1.amazonaws.com/prod/lrsapi/
-API_KEY=jceBCdeGZP9RDeUNCfM4jIQ39Cx0jtG51QgcwDwc
+API_KEY=YOUR KEY
 VERB="started"
 
 clear
