@@ -1,7 +1,7 @@
 # Reptilian Dictionary
 # Milestone Project 3 - Kelvin Nicholson
 
-![Reptilian Dictionary](mockup.png)
+![Reptilian Dictionary](/README/mockup.png)
 
 The purpose of this project was to create a multiple page website for a repitilian dictionary/glossary to allow users to view, edit and delete contributions.
 
@@ -80,7 +80,7 @@ The purpose of this project was to create a multiple page website for a repitili
   * Sitemap: 
     * All pages navigate to eachother through the use of buttons or the navigation bar.
 
-    ![sitemap](gloomap.png)
+    ![sitemap](/README/gloomap.png)
 
   * 404 page:
     * User will be redirected to a 404 error page when attempting to access a page that no longer exists or is unavailable. (This is not functioning currently.)
@@ -88,7 +88,7 @@ The purpose of this project was to create a multiple page website for a repitili
 * ## Surface 
   * Colour Scheme:
 
-    ![Palette Colours](MP3.png)
+    ![Palette Colours](/README/MP3.png)
 
     * The colours for this project were chosen based off of contrast.
 

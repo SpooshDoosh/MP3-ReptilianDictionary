@@ -30,36 +30,30 @@ I personally tested the website on my Google Pixel 7 Pro.
     * I want to understand the main purpose of the website.
         * On the homepage there is a brief description of who and what the website is for.
 
-        ![](
+        ![FTU1](/TESTING/FTU1.png)
 
     * I want to be able to easily understand and navigate the website.
         * There is a navigation bar along the top of every page. Clicking on the logo will return the user to the homepage. There are buttons throughout the website with a clear description of their purpose. There is a Back To Top butoon at the bottom of the definitions page.
 
-        ![]()
+        ![FTU2](/TESTING/FTU2.png)
 
-        ![]()
+        ![FTU3](/TESTING/FTU3.png)
 
     * I want to find terminology related to reptile keeping.
         * On the homepage, the dictionary with all the definitions within the database can be found along with a search bar.
 
-        ![]()
-
-        ![]()
+        ![FTU4](/TESTING/FTU4.png)
 
      * I want to be able contribute to the dictionary/glossary.
         * Once a user has registered they are then able to add words to the dictionary.
 
-        ![]()
-
-        ![]()
-
-        ![]()
+        ![FTU5](/TESTING/FTU5.png)
 
 * Returning User
     * I want to be able to edit or remove my previous contributions.
         * From within the profile page, a user can edit or remove their contributions.
 
-        ![]()
+        ![RU1](/TESTING/RU1.png)
 
         ![]()
 
@@ -68,43 +62,33 @@ I personally tested the website on my Google Pixel 7 Pro.
     * I want to be able to contact the website owner.
         * 
 
-        ![]()
-
-        ![]()
-
-        ![]()
+        ![RU2](/TESTING/RU2.png)
 
     * I want to be able to register and/or login.
         * The login and register pages are found within the navigation bar.
 
-        ![]()
-
-        ![]()
+        ![RU3](/TESTING/RU3.png)
 
 * Site Owner
     * I want the website to be easily found using search engines.
         * Each webpage has been run through lighthouse which produces a score for Search Engine Optimization. These checks ensure that the page is optimized for search engine results ranking.
 
-        ![]()
-
     * I want the website to clearly indicate it's purpose.
         * On the homepage there is a brief description of who and what the website is for.
 
-        ![]()
+        ![FTU1](/TESTING/FTU1.png)
 
     * I want site visitors to be able to easily locate the definitions and their contributions.
         * All the words from the dictionary will be on the home page, and if a user wants to view only their submissions, this can be done from the profile page.
 
-        ![]()
+        ![FTU4](/TESTING/FTU4.png)
 
-        ![]()
-
-        ![]()
+        ![RU1](/TESTING/RU1.png)
 
     * I want site visitors to be able to register and login.
         * The login and register pages are found within the navigation bar.
 
-        ![]()
+        ![RU3](/TESTING/RU3.png)
 
 ---
 
