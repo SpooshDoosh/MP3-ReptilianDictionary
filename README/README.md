@@ -83,8 +83,7 @@ The purpose of this project was to create a multiple page website for a repitili
     ![sitemap](gloomap.png)
 
   * 404 page:
-    * User will be redirected to a 404 error page when attempting to access a page that no longer exists or is unavailable. This is the [404 page]().
-    ![404]()
+    * User will be redirected to a 404 error page when attempting to access a page that no longer exists or is unavailable. (This is not functioning currently.)
 
 * ## Surface 
   * Colour Scheme:
@@ -138,7 +137,7 @@ The purpose of this project was to create a multiple page website for a repitili
 ---
 
 # Testing
-* Please see [TESTING.md](TESTING.md).
+* Please see [TESTING.md](/TESTING/TESTING.md).
 
 ---
 
