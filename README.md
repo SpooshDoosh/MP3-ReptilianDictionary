@@ -73,9 +73,7 @@ The purpose of this project was to create a multiple page website for a repitili
 
 * ## Skeleton
   * Wireframes:
-    - Mobile: [Home]() | [Login]() | [Register]() | [Add Word]() | [Edit Word]() | [Profile]() 
-    - Tablet: [Home]() | [Login]() | [Register]() | [Add Word]() | [Edit Word]() | [Profile]()
-    - Desktop: [Home]() | [Login]() | [Register]() | [Add Word]() | [Edit Word]() | [Profile]()
+    - [Home](/README/1-Homepage.png) | [Login](/README/5-Login.png) | [Register](/README/6-Register.png) | [Add Word](/README/3-Add-Word.png) | [Edit Word](/README/4-Edit-Word.png) | [Profile](/README/2-Profile.png)
 
   * Sitemap: 
     * All pages navigate to eachother through the use of buttons or the navigation bar.
