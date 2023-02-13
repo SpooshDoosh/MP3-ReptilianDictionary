@@ -7,7 +7,7 @@
     <!-- Font Awesome Icons -->
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.1/css/all.min.css" 
     integrity="sha512-MV7K8+y+gLIBoVD59lQIYicR65iaqukzvf/nwasF0nqhPay5w/9lJmVM2hMDcnK1OnMGCdVK+iQrJ7lzPJQd1w==" 
-    crossorigin="anonymous" referrerpolicy="no-referrer" type="text/css"/>
+    crossorigin="anonymous" referrerpolicy="no-referrer" type="text/css">
     <!-- Materialize Compiled and minified CSS -->
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/css/materialize.min.css" type="text/css">
     <link rel="stylesheet" href="{{ url_for('static', filename='css/style.css') }}" type="text/css">
@@ -23,7 +23,7 @@
         <nav class="nav-extended text-shadow deep-orange">
             <div class="nav-wrapper">
               <a href="{{ url_for('get_definitions') }}" class="brand-logo">
-                <img src="/static/images/Untitled-4.png" height="70px" alt="R.D Logo">
+                <img src="/static/images/Untitled-4.png" height="70" alt="R.D Logo">
               </a>
               <a href="#" data-target="mobile-demo" class="sidenav-trigger right"><i class="fas fa-bars"></i></a>
               <ul class="right hide-on-med-and-down">
@@ -55,7 +55,7 @@
           </ul>
     </header>
 
-    <section>
+    <div>
         <!-- flash messages -->
         {% with messages = get_flashed_messages() %}
             {% if messages %}
@@ -66,7 +66,7 @@
                 {% endfor %}
             {% endif %}
         {% endwith %}
-    </section>
+    </div>
 
     <main class="container">
     {% block content %}
