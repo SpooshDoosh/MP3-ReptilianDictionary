@@ -65,15 +65,15 @@ p {
     color: #fff;
 }
 
-
 /*-------------------- BUTTONS ---------------------*/
 
 .btn-floating {
     margin: 5px;
 }
 
-.btn-medium {
+.btn-medium, .btn-large {
     border-radius: 30px;
+    font-family: Kanit, sans-serif;
 }
 
 /*-------------------- HEADINGS ---------------------*/
