@@ -142,36 +142,26 @@ The purpose of this project was to create a multiple page website for a repitili
 ---
 
 # Deployment
-This project was deployed to GitHub pages. This project made use of the Code Institute template which can be found [here]().
+This project was deployed to Heroku. This project made use of the Code Institute template which can be found [here](https://github.com/Code-Institute-Org/gitpod-full-template).
 
-## GitHub Pages
-1. Log in to GitHub and locate this project's [repository]().
-2. Select the "Settings" tab on the repository navigation bar.
+## Heroku and Github
+1. Once code has been pushed from IDE to Github, go to Heroku.
 
-![navbar]()
+2. Register/Sign in to Heroku.
 
-3. Select the "Pages" tab on the left hand side menu.
+3. Create application on Heroku.
 
-![pages]()
+4. Select 'Deploy' tab, connect to GitHub under 'Deployment method'.
 
-4. Under "Branch", select the dropdown labelled "None" and change it to "Main". Select "Save".
+5. Enable automatic deploys from main branch.
 
-![branch]()
+6. You can then make use of deployment link.
 
-![main]()
-
-![save]()
-
-5. The page will now refresh automatically and provide a link to the published site.
-
-![published]()
 
 ## Local Deployment
-1. Log in to GitHub and locate this project's [repository]().
+1. Log in to GitHub and locate this project's [repository](https://github.com/SpooshDoosh/Milestone-Project-2-Ubuntu-Holidays).
 
 2. Select the "Code" dropdown and copy the link provided.
-
-![clone]()
 
 3. You can now paste this link into your IDE terminal.
 
@@ -179,3 +169,5 @@ This project was deployed to GitHub pages. This project made use of the Code Ins
 
 # Credits
 
+* [Multi Device Mockup Generator](https://techsini.com/multi-mockup/)
+* [Code Institute Non-Relational Database Management Systems Mini Project ](https://learn.codeinstitute.net/ci_program/level5diplomainwebappdevelopment)
