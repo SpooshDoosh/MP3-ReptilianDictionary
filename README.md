@@ -71,6 +71,40 @@ The purpose of this project was to create a multiple page website for a repitili
     * Add admin priveledges to allow to admin to remove or edit contributions directly from the website without having to edit the database directly.
     * Add the ability to view terminology based off of categories.
 
+
+  * Database
+
+    * MongoDB Atlas was used to store the data for this website.
+      * The model below displays all the fields and their respective data types that are stored within the mongo database.
+        ![dbschema](/README/dbschema.png)
+
+
+     * 3 collections are stored in the 'reptilian_dictionary' database.
+
+        ![database](/README/database1.png)
+
+      * 'categories' was created to store the definition category names.
+        * Fields stored:
+          * category_name(string)
+
+        ![dbschema](/README/database2.png)
+
+      * 'definitions' was created to store the words, their definitions, the category names and the contributors.
+        * Fields stored:
+          * word(string)
+          * word_definition(string)
+          * category_name(string)
+          * contributor(string)
+
+        ![dbschema](/README/database3.png)
+
+      * 'users' was created to store the registered usernames and their passwords.
+        * Fields stored:
+          * username(string)
+          * passwprd(string) - the password is encrypted by making use of 'generate_password_hash' from werkzeug.security Python library.
+
+        ![dbschema](/README/database4.png)
+
 * ## Skeleton
   * Wireframes:
     - [Home](/README/1-Homepage.png) | [Login](/README/5-Login.png) | [Register](/README/6-Register.png) | [Add Word](/README/3-Add-Word.png) | [Edit Word](/README/4-Edit-Word.png) | [Profile](/README/2-Profile.png)
