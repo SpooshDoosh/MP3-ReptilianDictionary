@@ -163,7 +163,7 @@ def edit_word(word_id):
 
 @app.route("/delete_word/<word_id>")
 def delete_word(word_id):
-    mongo.db.definitions.remove({"_id": ObjectId(word_id)})
+    mongo.db.definitions.delete_one({"_id": ObjectId(word_id)})
     flash("Word removed successfully")
     return redirect(url_for("get_definitions"))
 
