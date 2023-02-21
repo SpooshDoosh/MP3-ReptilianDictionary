@@ -165,6 +165,7 @@ The purpose of this project was to create a multiple page website for a repitili
   * [Wirefram.cc](https://wireframe.cc/) - Used for wireframing of the website.
   * [Coolors](https://coolors.co/) - Used to assemble an appropriate colour palette.
   * [Gloo Maps](https://www.gloomaps.com/) - Used to create sitemap.
+  * [DbSchema](https://dbschema.com/) - Used to create the model for the database schema.
 
 ---
 
@@ -203,3 +204,4 @@ This project was deployed to Heroku. This project made use of the Code Institute
 
 * [Multi Device Mockup Generator](https://techsini.com/multi-mockup/)
 * [Code Institute Non-Relational Database Management Systems Mini Project ](https://learn.codeinstitute.net/ci_program/level5diplomainwebappdevelopment)
+* [DbSchema](https://dbschema.com/)
