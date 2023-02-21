@@ -167,6 +167,10 @@ The website's CSS was run through the W3C CSS Validation Service (Jigsaw). No is
     
     * Eventually realised that I had not put "method='POST'" into register.html form.
 
+* Delete button on edit_word.html not working and throwing an error.
+
+    * I was using the 'remove()' method which is now deprecated. It has since changed to 'delete_one()' or 'delete_many()'.
+
 ## Unresolved
 
 * Unable to change input colour for "word defintion" on add_word.html.
