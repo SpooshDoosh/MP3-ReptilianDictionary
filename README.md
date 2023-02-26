@@ -170,7 +170,7 @@ The purpose of this project was to create a multiple page website for a repitili
 ---
 
 # Testing
-* Please see [TESTING.md](/TESTING/TESTING.md).
+* Please see [TESTING.md](/TESTING.md).
 
 ---
 
