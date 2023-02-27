@@ -45,6 +45,13 @@ body {
     background-repeat: no-repeat;
     background-attachment: fixed;
     font-family: 'Kanit', sans-serif;
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+}
+
+footer {
+    margin-top: auto;
 }
 
 .text-shadow {
